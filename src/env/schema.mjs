@@ -1,6 +1,9 @@
 import { z } from "zod";
 
 export const serverSchema = z.object({
+  NODE_ENV: z.enum(["testing", "development", "production"]),
+  HOST_DOMAIN: z.string().optional(),
+  PORT: z.number().optional(),
   DATABASE_URL: z.string(),
   DISCORD_CLIENT_ID: z.string(),
   DISCORD_CLIENT_SECRET: z.string(),

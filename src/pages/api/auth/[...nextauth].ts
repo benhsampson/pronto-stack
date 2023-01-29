@@ -5,7 +5,7 @@ import { env } from "../../../env/server.mjs";
 import { db } from "../../../server/db/client";
 import { PGAdapter } from "../../../server/lib/PGAdapter";
 
-const authOptions: NextAuthOptions = {
+export const authOptions: NextAuthOptions = {
   adapter: PGAdapter(db),
   providers: [
     DiscordProvider({
